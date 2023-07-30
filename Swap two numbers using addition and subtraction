@@ -1,3 +1,6 @@
+Question : Write a program to Swap 2 numbers without using a third variable by multiplication & division.
+
+**********Program**********
 
 #include <iostream>
 using namespace std;
@@ -12,4 +15,11 @@ int main() {
    cout<<a<<" "<<b<<endl;
     return 0;
 }
+
+**********Output********
+
+Before swapping:
+34 21
+After swapping:
+21 34
 
