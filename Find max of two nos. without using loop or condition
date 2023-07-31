@@ -1,0 +1,13 @@
+//Write a program to find maximum of two numbers without using loop or condition.
+//Program
+#include <iostream>
+using namespace std;
+int main() {
+    int a=20,b=10,min,max;
+    max=((a+b)+abs(a-b))/2;
+    min=((a+b)-abs(a-b))/2;
+cout<<"Maximum:"<<max;
+cout<<"\nMinimum:"<<min;
+    return 0;
+}
+
