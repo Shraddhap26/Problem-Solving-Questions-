@@ -11,3 +11,6 @@ cout<<"\nMinimum:"<<min;
     return 0;
 }
 
+----------------Output--------------------
+Maximum:20
+Minimum:10
