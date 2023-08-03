@@ -54,3 +54,32 @@ for(int i=0;i<n;i++){
 }
     return 0;
 }
+
+________________________________________________________________________________________________________
+Enter number of rows:5
+A 
+B C 
+C D E 
+D E F G 
+E F G H I 
+
+
+//Program
+#include <iostream>
+using namespace std;
+int main() {
+    cout<<"Enter number of rows:";
+    int n;
+    cin>>n;
+    int num=0;
+   
+for(int i=0;i<n;i++){
+    for(int j=0;j<=i;j++){
+         char ch='A'+i+j;
+        cout<<ch<<" ";
+       
+    }
+    cout<<"\n";
+}
+    return 0;
+}
