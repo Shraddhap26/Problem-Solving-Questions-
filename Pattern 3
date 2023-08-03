@@ -56,6 +56,7 @@ for(int i=0;i<n;i++){
 }
 
 ________________________________________________________________________________________________________
+//Program -> Method 1(if we put i=0 and j=0)
 Enter number of rows:5
 A 
 B C 
@@ -76,6 +77,29 @@ int main() {
 for(int i=0;i<n;i++){
     for(int j=0;j<=i;j++){
          char ch='A'+i+j;
+        cout<<ch<<" ";
+       
+    }
+    cout<<"\n";
+}
+    return 0;
+}
+
+
+
+-------------------------------
+//Program -> Method 2(if we put i=1 and j=1)
+#include <iostream>
+using namespace std;
+int main() {
+    cout<<"Enter number of rows:";
+    int n;
+    cin>>n;
+    int num=0;
+   
+for(int i=1;i<=n;i++){
+    for(int j=1;j<=i;j++){
+         char ch='A'+i+j-2;
         cout<<ch<<" ";
        
     }
