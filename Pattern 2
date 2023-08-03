@@ -1,0 +1,24 @@
+Enter number of rows:5
+AAAAA
+BBBBB
+CCCCC
+DDDDD
+EEEEE
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    cout<<"Enter number of rows:";
+    int n;
+    cin>>n;
+for(int i=1;i<=n;i++){
+    for(int j=0;j<n;j++){
+        char ch='A'+i-1;
+        cout<<ch;
+    }
+    cout<<"\n";
+}
+
+    return 0;
+}
