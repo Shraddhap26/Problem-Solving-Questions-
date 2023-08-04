@@ -1,0 +1,24 @@
+//Code to convert binary to decimal
+#include <iostream>
+using namespace std;
+#include<math.h>
+using namespace std;
+int main() {
+  int a=111;
+  int i=0;
+  int ans=0;
+  while(a!=0){
+      int digit=a%10;
+      if(digit==1){
+          ans=pow(2,i)+ans; 
+      }
+     
+      i++;
+      a=a/10;
+  }
+    cout<<ans;
+    return 0;
+}
+
+//Output:
+7
