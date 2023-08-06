@@ -1,0 +1,22 @@
+//Count total number of set bits in given numbers.
+#include <iostream>
+using namespace std;
+int countbit(int num){
+    int count=0;
+    
+    while(num!=0){
+       if(num&1){
+           count++;
+       }
+       num=num>>1;
+    }
+    return count;
+}
+int main() {
+    int c=countbit(7)+countbit(11);
+    cout<<" Number of set bits in given numbers are:"<< c;
+    return 0;
+}
+
+Output:
+Number of set bits in given numbers are:6
