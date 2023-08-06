@@ -1,0 +1,38 @@
+Using switch statement, calculate number of notes of 100,50,20 and 1 required for given amount.
+
+//Program
+#include <iostream>
+using namespace std;
+int main() {
+    int amt;
+    cout<<"Enter amount:";
+    cin>>amt;
+    int n100,n50,n20,n1;
+    switch(1){
+        case 1:n100=amt/100;
+               amt=amt%100;
+               cout<<"Required notes of 100 : "<<n100<<"\n";
+              
+        case 2:n50=amt/50;
+               amt=amt%50;
+               cout<<"Required notes of 50 : "<<n50<<"\n";
+             
+        case 3:n20=amt/20;
+               amt=amt%20;
+               cout<<"Required notes of 20 : "<<n20<<"\n";
+       
+        case 4:n1=amt/1;
+               amt=amt%1;
+               cout<<"Required notes of 1: "<<n1<<"\n";
+    }
+
+    return 0;
+}
+
+
+//Output:
+Enter amount:1330
+Required notes of 100 : 13
+Required notes of 50 : 0
+Required notes of 20 : 1
+Required notes of 1: 10
