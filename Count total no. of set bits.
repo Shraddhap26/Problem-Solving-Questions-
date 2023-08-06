@@ -1,4 +1,4 @@
-//Count total number of set bits in given numbers.
+//Count total number of set bits in given numbers.(count number of 1's in binary number)
 #include <iostream>
 using namespace std;
 int countbit(int num){
