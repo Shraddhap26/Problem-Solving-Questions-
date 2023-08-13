@@ -1,4 +1,7 @@
 //Find intersection between two arrays
+
+//we can find using normal way(compare each element with another array elements and if match is found then replace it by some number) 
+//also but TLE thats why this is a optimize solution
 //Method 2
 #include<vector>
 using namespace std;
