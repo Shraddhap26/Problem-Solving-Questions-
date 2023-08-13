@@ -1,0 +1,24 @@
+//find unique element from an array if n=2m+1
+//here we are used EOX properties
+// a ^ a = 0
+// a ^ 0 = a
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[10]={4,3,2,4,5,3,5,1,2};
+   int ans=0;
+   int len=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<len;i+=1)
+    {
+       ans=ans ^ arr[i];
+    }
+    cout<<"Unique element :"<<ans;
+    return 0;
+}
+
+//output:
+Unique element :1
