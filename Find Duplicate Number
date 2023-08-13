@@ -1,5 +1,5 @@
 //Write a program to find out duplicate number(v-10)
-//my program
+//my program (method 1)
 #include <iostream>
 #include <iostream>
 using namespace std;
