@@ -1,0 +1,28 @@
+//Method 1(without binary search)
+//Program to find out First and last position of element in the array(V-13)
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[5]={9,1,2,3,1};
+    int num=1;
+    int lpos,fpos;
+    for(int i=0;i<5;i++){
+        if(num==arr[i]){
+            fpos=i;
+            break;
+        }
+    }
+    for(int i=5;i>0;i--){
+        if(num==arr[i]){
+            lpos=i;
+            break;
+        }
+    }
+cout<<"first index:"<<fpos<<endl;
+cout<<"Last index:"<<lpos;
+
+    return 0;
+}
+Output: 
+first index:1
+Last index:4
