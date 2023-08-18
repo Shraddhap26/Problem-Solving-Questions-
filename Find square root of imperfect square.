@@ -1,3 +1,6 @@
+/*
+Find square root of imperfect square (give answer in floating point)
+*/
 #include <iostream>
 using namespace std;
 int findsqtroot(int n){
@@ -23,8 +26,23 @@ int findsqtroot(int n){
         }
         return ans;
 }
+double morePrecision(int n,int precision,int sqrttemvalue){
+float factor=1;
+float ans=sqrttemvalue;
+ for(int j=0;j<precision;j++){
+    factor=factor/10;
+    for(float i=ans ; i*i<n ; i=i+factor){
+      ans=i;
+    }
+}
+return ans;
+}
+
 int main() {
-    int ans=findsqtroot(35);
-    cout<<ans;
+    int ans=findsqtroot(38);
+    float accurate_sqrt=morePrecision(38,3,ans);
+    cout<<accurate_sqrt;
         return 0;
 }
+//Output :
+5
