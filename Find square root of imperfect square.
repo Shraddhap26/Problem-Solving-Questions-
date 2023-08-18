@@ -1,6 +1,6 @@
-/*
-Find square root of imperfect square (give answer in floating point)
-*/
+
+//Find square root of imperfect square (give answer in floating point)
+
 #include <iostream>
 using namespace std;
 int findsqtroot(int n){
