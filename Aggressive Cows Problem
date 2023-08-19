@@ -1,0 +1,61 @@
+/*
+You are given an array consisting of n integers which denote the position of a stall. You are also given an integer k which denotes the number
+of aggressive cows. You are given the task of assigning stalls to k cows such that the minimum distance between any
+two of them is the maximum possible.
+The first line of input contains two space-separated integers n and k.
+The second line contains n space-separated integers denoting the position of the stalls.
+*/
+
+//Program:
+#include <iostream>
+#include <algorithm>
+using namespace std;
+bool ispossible(int arr[],int n,int m,int mid){
+    int cowcount=1;
+    int lastpos=arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]-lastpos>=mid){
+            cowcount++;
+            if(cowcount==m){
+                return true; 
+            }
+            lastpos=arr[i];
+        }
+    }
+    return false;
+}
+
+int bookallocation(int arr[],int m){
+     int start=0;
+    int len = sizeof(arr) / sizeof(arr[0]);
+     sort(arr,arr+(4)) ;
+     cout<<"len :"<<len<<endl;
+     for(int i=0;i<5;i++){
+         cout<<arr[i];
+     }
+     int end=arr[4];
+     int ans=-1;
+     int mid=(start+end)/2;
+     while(start<=end){
+         if(ispossible(arr,5,m,mid)){
+             ans=mid;
+             start=mid+1;
+         }else
+         {
+             end=mid-1;
+         }
+         mid=(start+end)/2;
+     }
+    return ans;
+}
+int main() {
+    int arr[5]={1,2,3,4,6};
+   int ans=bookallocation(arr,2);
+   cout<<"\nans:"<<ans;
+    return 0;
+}
+
+//Output :
+len :2
+12346
+ans:5
