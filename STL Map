@@ -1,0 +1,58 @@
+//Map : It stores data in key-value pair.It has unique keys.
+
+//TC of insert,find,erase and count function is 0(log n)
+//This map is implemented by red-black tree or balance tree therefore TC of search in 0(log n).
+//This unordered map is implemented by hash table so TC of serach is O(1) 
+#include <iostream>
+#include<map>
+using namespace std;
+int main() {
+  
+map<int,string> m1;
+m1[1]="Shraddha";
+m1[3]="Sona";
+m1[23]="Shiva";
+m1[17]="Rani";
+m1[12]="Sneha";
+m1.insert({5,"Manu"});
+
+
+cout<<"Find 23 :"<<m1.count(23)<<endl;
+cout<<"Before Erase map is :\n"; 
+for(auto i:m1){
+    cout<<i.first<<" "<<i.second<<endl;
+}
+m1.erase(3);//Give the key value that we want to delete
+cout<<"\n\nAfter Erase map is :\n"; 
+for(auto i:m1){
+    cout<<i.first<<" "<<i.second<<endl;
+}
+
+auto it=m1.find(12);
+cout<<"\n\nElements from find function are :\n";
+for(auto i=it;i!=m1.end();i++){
+    cout<<(*i).first<<" ";
+}
+
+  return 0;
+}
+//output :
+Find 23 :1
+Before Erase map is :
+1 Shraddha
+3 Sona
+5 Manu
+12 Sneha
+17 Rani
+23 Shiva
+
+
+After Erase map is :
+1 Shraddha
+5 Manu
+12 Sneha
+17 Rani
+23 Shiva
+
+Elements from find function are :
+12 17 23 
