@@ -1,0 +1,57 @@
+
+//Set : It stores unique elements and it gives elemnet in sorted order
+//It is slow than unordered set 
+//TC of insert,find,erase and count function is 0(log n)
+//TC of begin,end,empty and size function is 0(1).
+#include <iostream>
+#include<set>
+using namespace std;
+int main() {
+  
+set<int> s1;
+s1.insert(3);
+s1.insert(4);
+s1.insert(39);
+s1.insert(3);
+s1.insert(10);
+s1.insert(3);
+s1.insert(20);
+s1.insert(39);
+s1.insert(39);
+s1.insert(10);
+for(auto i:s1){
+    cout<<i<<" ";
+}
+ 
+set<int> :: iterator it=s1.begin();
+it++;
+it++;
+//s1.erase(3); like this we can directly delete the elements by giving its value
+s1.erase(it);
+
+cout<<endl;
+for(auto i:s1){
+    cout<<i<<" ";
+}
+cout<<endl;
+cout<<"20 is present(1) or not(0)? :"<<s1.count(20);//Count function is used to check weather the given element is present or not.
+cout<<endl;
+cout<<"-20 is present(1) or not(0)? :"<<s1.count(-20);
+ cout<<endl;   
+set<int> :: iterator it2=s1.find(4); // find method first check the element is present or not and then it is present then return its iterator
+// cout<<"Iterator of 20 is "<<*it2<<endl; //this statement is right but don't know why is it not running
+//Below for loop will print all the elements from the elements that is passed to find function
+for(auto i=it2;i!=s1.end();i++){
+    cout<<*i<<" ";
+}
+ 
+  return 0;
+}
+
+//output :
+3 4 10 20 39 
+3 4 20 39 
+20 is present(1) or not(0)? :1
+-20 is present(1) or not(0)? :0
+Iterator of 20 is 4
+4 20 39 
