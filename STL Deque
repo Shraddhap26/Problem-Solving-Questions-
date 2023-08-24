@@ -1,0 +1,87 @@
+//Deque : Double ended queue. Here we can insert and delete element form both sides. 
+//Program
+#include <iostream>
+#include<deque>
+using namespace std;
+int main() {
+   deque<int> d1;//here we can push element from both sides back and front  
+   
+   d1.push_back(5);
+   d1.push_front(1);
+   d1.push_back(4);
+   d1.push_front(2);
+   d1.push_back(3);
+   d1.push_front(7);
+   
+   cout<<"d1 Deque: ";
+   for(int i:d1){
+       cout<<i<<" ";
+   }
+   cout<<"\n";
+  
+    //In this size returns the number of elements in the vector
+    cout<<"Size of Deque :"<<d1.size()<<endl;
+    cout<<"Element at specific index:"<<d1.at(2)<<endl;
+    cout<<"First Element :"<<d1.front()<<endl;
+    cout<<"Last Element :"<<d1.back()<<endl;
+    cout<<"Is 1st array empty(1) or not(0) :"<<d1.empty()<<endl;
+   
+    
+    cout<<"Before pop from  back:"<<"\n";
+    for(int i:d1){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+    d1.pop_back();
+    cout<<"After pop from  back:"<<"\n";
+    for(int i:d1){
+        cout<<i<<" ";
+    }
+     cout<<"\n";
+     cout<<"\n";
+    cout<<"Before pop from front:"<<"\n";
+    for(int i:d1){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+    d1.pop_front();
+    cout<<"After pop from front:"<<"\n";
+    for(int i:d1){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+    cout<<"\n";
+   
+    cout<<"Before clear Deque size:"<<d1.size()<<endl;
+    d1.erase(d1.begin(),d1.begin()+1);
+    //d1.erase(d1.begin(),d1.end()); and  d1.erase(d1.begin(),d1.begin()+d1.size());//to delete all dequee
+    
+    cout<<"After clear Deque size:"<<d1.size()<<endl;
+    cout<<"After erase:"<<"\n";
+    for(int i:d1){
+        cout<<i<<" ";
+    }
+    return 0;
+}
+
+//Output:
+d1 Deque: 7 2 1 5 4 3 
+Size of Deque :6
+Element at specific index:1
+First Element :7
+Last Element :3
+Is 1st array empty(1) or not(0) :0
+Before pop from  back:
+7 2 1 5 4 3 
+After pop from  back:
+7 2 1 5 4 
+
+Before pop from front:
+7 2 1 5 4 
+After pop from front:
+2 1 5 4 
+
+Before clear Deque size:4
+After clear Deque size:3
+After erase:
+1 5 4 
