@@ -1,0 +1,38 @@
+//Stack :It is LIFO or FILO structure 
+//Program
+#include <iostream>
+#include<stack>
+using namespace std;
+int main() {
+    
+  stack<string> s1;
+  s1.push("Shraddha");
+  s1.push("Gauri");
+  s1.push("Rutika");
+  s1.push("Sonali");
+  cout<<"Size of Stack:"<<s1.size();
+  cout<<endl<<"Top of Stack:"<<s1.top();
+  s1.pop();
+  cout<<"\n\nAfter popping 1 element:"<<endl;
+  cout<<endl<<"Top of Stack:"<<s1.top();
+  cout<<endl<<"Size of Stack:"<<s1.size();
+  cout<<endl;
+  cout<<"\nPrint Stack:\n";
+   while (!s1.empty()) {
+        cout << s1.top() <<" ";
+        s1.pop();
+    }
+  return 0;
+}
+
+//Output:
+Size of Stack:4
+Top of Stack:Sonali
+
+After popping 1 element:
+
+Top of Stack:Rutika
+Size of Stack:3
+
+Print Stack:
+Rutika Gauri Shraddha 
