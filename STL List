@@ -1,0 +1,67 @@
+//List :It is implemented by deque. As like deque ,in list also we can insert and remove elements from both side.
+//In this we can't access specific location element
+//program
+#include <iostream>
+#include<list>
+using namespace std;
+int main() {
+   list<int> l1;//here we can push element from both sides back and front
+   list<int> l2(5,100);//5 elements with same value i.e.100
+   cout<<"l2 List: ";
+    for(int i:l2){
+       cout<<i<<" ";
+   }
+   cout<<endl;
+   l1.push_back(5);
+   l1.push_front(1);
+   l1.push_back(4);
+   l1.push_front(2);
+   l1.push_back(6);
+   l1.push_front(7);
+   
+   cout<<"l1 List: ";
+   for(int i:l1){
+       cout<<i<<" ";
+   }
+   
+   cout<<"\n";
+  //Same all functions as deque and vector
+    //In this size returns the number of elements in the vector
+    cout<<"Size of List :"<<l1.size()<<endl;
+   
+    cout<<"First Element :"<<l1.front()<<endl;
+    cout<<"Last Element :"<<l1.back()<<endl;
+    cout<<"Is 1st list empty(1) or not(0) :"<<l1.empty()<<endl;
+  
+    cout<<"\n";
+    cout<<"\n";
+   
+    cout<<"Before erase l1 List: ";
+   for(int i:l1){
+       cout<<i<<" ";
+   }
+    cout<<"\n";
+    cout<<"Before clear Deque size:"<<l1.size()<<endl;
+    l1.erase(l1.begin());
+    cout<<"After clear Deque size:"<<l1.size()<<endl;
+    cout<<"After erase:"<<"\n";
+    for(int i:l1){
+        cout<<i<<" ";
+    }
+    return 0;
+}
+
+//Output:
+l2 List: 100 100 100 100 100 
+l1 List: 7 2 1 5 4 6 
+Size of List :6
+First Element :7
+Last Element :6
+Is 1st list empty(1) or not(0) :0
+
+
+Before erase l1 List: 7 2 1 5 4 6 
+Before clear Deque size:6
+After clear Deque size:5
+After erase:
+2 1 5 4 6 
