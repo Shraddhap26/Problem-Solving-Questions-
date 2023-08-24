@@ -1,0 +1,92 @@
+//It a dynamic data structure same as array that  use continuous memory location to store the elements
+//Program
+#include <iostream>
+#include<vector>
+using namespace std;
+int main() {
+   vector<int> v1;
+   vector<int> v2(6,1);//It means create a vector of 6 element with all elements have same value i.e. 1.
+   cout<<"V2 vector: ";
+   for(int i:v2){
+       cout<<i<<" ";
+   }
+   cout<<endl;
+   //copy one vector to another
+   vector<int> clone(v2);
+    cout<<"Copy of V2 vector: ";
+   for(int i:clone){
+       cout<<i<<" ";
+   }
+   
+   cout<<endl<<"Capacity :"<<v1.capacity()<<endl;
+   
+   //Capacity return the size of list
+   v1.push_back(2);
+   cout<<"Capacity :"<<v1.capacity()<<endl;
+   
+   v1.push_back(3);
+   cout<<"Capacity :"<<v1.capacity()<<endl;
+   
+   v1.push_back(4);
+   cout<<"Capacity :"<<v1.capacity()<<endl;
+   
+    v1.push_back(5);
+   cout<<"Capacity :"<<v1.capacity()<<endl;
+   
+    v1.push_back(6);
+   cout<<"Capacity :"<<v1.capacity()<<endl;
+   
+   
+  
+    //In this size returns the number of elements in the vector
+    cout<<"Size of vector :"<<v1.size()<<endl;
+    cout<<"Element at specific index:"<<v1.at(2)<<endl;
+    cout<<"First Element :"<<v1.front()<<endl;
+    cout<<"Last Element :"<<v1.back()<<endl;
+    cout<<"Is 1st array empty(1) or not(0) :"<<v1.empty()<<endl;
+   
+    
+    cout<<"Before pop:"<<"\n";
+    for(int i:v1){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+    v1.pop_back();
+    cout<<"After pop:"<<"\n";
+    for(int i:v1){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
+    cout<<"\n";
+    cout<<"Before clear vector Capacity:"<<v1.capacity()<<endl;
+    cout<<"Before clear vector size:"<<v1.size()<<endl;
+    v1.clear();
+    cout<<"Before clear vector  Capacity:"<<v1.capacity()<<end;
+    cout<<"After clear vector size:"<<v1.size()<<endl;
+
+    return 0;
+}
+
+//Output:
+V2 vector: 1 1 1 1 1 1 
+Copy of V2 vector: 1 1 1 1 1 1 
+Capacity :0
+Capacity :1
+Capacity :2
+Capacity :4
+Capacity :4
+Capacity :8
+Size of vector :5
+Element at specific index:4
+First Element :2
+Last Element :6
+Is 1st array empty(1) or not(0) :0
+Before pop:
+2 3 4 5 6 
+After pop:
+2 3 4 5 
+
+Before clear vector Capacity:8
+Before clear vector size:4
+Before clear vector  Capacity:8
+After clear vector size:0
