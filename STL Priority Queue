@@ -1,0 +1,46 @@
+//Priority queue
+//Program :
+#include <iostream>
+#include<queue>
+using namespace std;
+int main() {
+  //max heap - by default heap is max i.e In a Max-Heap, the largest element is the first to be popped from the heap.
+  priority_queue<int> maxi;
+    
+  //min heap - In a Min-Heap, the smallest element is the first to be popped from the heap.
+  priority_queue<int,vector<int>,greater<int>> mini;
+  
+  maxi.push(5);
+  maxi.push(7);
+  maxi.push(34);
+  maxi.push(2);
+  maxi.push(19);
+  
+  cout<<"\nPrint Max Priority  queue:\n";
+  int size=maxi.size();
+   for (int i=0;i<size;i++) {
+        cout << maxi.top() <<" ";
+        maxi.pop();
+    }
+    
+ 
+  mini.push(5);
+  mini.push(7);
+  mini.push(34);
+  mini.push(2);
+  mini.push(19);
+ 
+  cout<<"\nPrint Min Priority  queue:\n";
+  size=mini.size();
+   for (int i=0;i<size;i++) {
+        cout << mini.top() <<" ";
+        mini.pop();
+    }
+  return 0;
+}
+
+//Output :
+Print Max Priority  queue:
+34 19 7 5 2 
+Print Min Priority  queue:
+2 5 7 19 34 
