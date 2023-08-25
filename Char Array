@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+ void reverseString(char s[],int len) {
+        int start=0;
+        int end=len-1;
+        while(start<=end){
+            swap(s[start++],s[end--]);
+        } 
+        
+}
+int palindrome(char s[],int len) {
+        int start=0;
+        int end=len-1;
+        while(start<=end){
+            if(s[start]==s[end]){
+            swap(s[start++],s[end--]);
+            }else{
+                return 0;
+            }
+        } 
+     return 1;    
+}
+
+
+int getlength(char ch[]){
+    int count=0;
+    for(int i=0;ch[i]!='\0';i++){
+       cout<<ch[i];
+        count++;
+    }
+    return count;
+}
+
+int main() {
+    char ch[20]="shraddha";
+    
+    int len=getlength(ch);
+    cout<<endl<<"Length of string :"<<len;
+    
+    reverseString(ch,len);
+    cout<<endl<<"Reverse of string :"<<ch;
+    
+    int ans=palindrome(ch,len);
+    cout<<endl;
+   if(ans==1){
+        cout<<"The given string is Palindrome";
+    }else{
+        cout<<"The given string is not Palindrome";
+    }
+    return 0;
+}
+//Output :
+shraddha
+Length of string :8
+Reverse of string :ahddarhs
+The given string is not Palindrome
