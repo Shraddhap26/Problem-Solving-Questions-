@@ -1,0 +1,26 @@
+//Replace within same string(inplace replace)
+#include <iostream>
+using namespace std;
+int main() {
+  string str="My name is khan";
+  cout<<str;
+   
+  int len=str.length();
+  cout<<endl<<"len :"<<len;
+  for(int i=0;i<len;i++)
+{
+    if(str[i]==' '){
+        str.replace(i, 1, "@40");//here i means the index of the 'space',,,, next argument means the number of elements to be replaced in this case we are only replacing ‘space’ with “@40”,so 1    and next argument  means the string to be copied.  
+    }else{
+        str[i]=str[i];
+    }
+}
+cout<<endl<<str;
+    return 0;
+}
+
+//Output :
+My name is khan
+len :15
+My@40name@40is@40khan
+
