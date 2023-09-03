@@ -1,4 +1,5 @@
 //Program 
+//left side is considered as sorted array and right side is considered as unsorted array
 #include <iostream>
 using namespace std;
 void insertionsort(int arr[],int n){
