@@ -1,5 +1,6 @@
 //Program 
 //left side is considered as sorted array and right side is considered as unsorted array
+//time complexity = O (n^2)
 #include <iostream>
 using namespace std;
 void insertionsort(int arr[],int n){
