@@ -1,4 +1,5 @@
 //Program
+//First large element will be sorted
 #include <iostream>
 using namespace std;
 void bubblesort(int arr[],int n){
