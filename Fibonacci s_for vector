@@ -13,3 +13,12 @@ class Solution
          return dp;
     }
 };
+
+
+//output:
+For Input: 
+5
+Your Output: 
+1 1 2 3 5
+Expected Output: 
+1 1 2 3 5
