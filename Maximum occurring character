@@ -5,6 +5,7 @@ using namespace std;
 char maxcharacter(string s){
     int arr[26]={0};
     int num=0;
+//lower case
     for(int i=0;i<s.length();i++)
     {
         num= s[i]-'a';
@@ -26,7 +27,6 @@ char maxcharacter(string s){
 int main() {
     string str="shraddhapatil";
     cout<<"Maximum occurring character in given string is : "<<maxcharacter(str);
-
     return 0;
 }
 
