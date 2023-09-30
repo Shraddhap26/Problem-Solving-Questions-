@@ -1,0 +1,47 @@
+//Print Matrix like a wave 
+| ^ | ^
+| | | |
+
+//Code 
+
+#include <iostream>
+using namespace std;
+int main() {
+   int mat[3][4];
+   int max=-1,index;
+   int min=100;
+   cout<<"\nEnter matrix element:";
+   for(int i=0;i<3;i++){
+       for(int j=0;j<4;j++){
+       cin>>mat[i][j];
+       
+   }
+   cout<<endl;
+   }
+   cout<<"\nMatrix elements are:";
+   for(int i=0;i<4;i++){
+       if(i&1)
+       {
+            for(int j=2;j>=0;j--)
+            {
+            cout<<mat[j][i]<<" ";
+            }
+       }else
+       {
+           for(int j=0;j<3;j++){
+            cout<<mat[j][i]<<" ";
+           }
+       }
+      
+   }
+   
+   
+    return 0;
+}
+
+//Output :
+Enter matrix element:
+1 2 3 4
+5 6 7 8
+9 10 11 12
+Matrix elements are:1 5 9 10 6 2 3 7 11 12 8 4 
