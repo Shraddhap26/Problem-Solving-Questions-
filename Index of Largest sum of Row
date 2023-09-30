@@ -1,0 +1,50 @@
+//Index of Largest sum of Row in matrix
+
+//Program :
+
+#include <iostream>
+using namespace std;
+int main() {
+   int mat[3][3];
+   int max=-1,index;
+   int min=100;
+   cout<<"\nEnter matrix element:";
+   for(int i=0;i<3;i++){
+       for(int j=0;j<3;j++){
+       cin>>mat[i][j];
+       
+   }
+   cout<<endl;
+   }
+   cout<<"\nMatrix elements are:";
+   for(int i=0;i<3;i++){
+       for(int j=0;j<3;j++){
+       cout<<mat[i][j]<<" ";
+   }
+   }
+   
+   cout<<"\nRow wise sum:";
+   for(int i=0;i<3;i++){
+       int sum=0;
+       for(int j=0;j<3;j++){
+       sum+=mat[i][j];
+   }
+    cout<<sum<<" ";
+   if(sum>max){
+       max=sum;
+       index=i;
+   }
+   }
+   cout<<"\nIndex of largest sum of row:"<<index;
+   
+    return 0;
+}
+
+//Output :
+Enter matrix element:
+11 22 44
+44 11 10
+66 2 1
+Matrix elements are:11 22 44 44 11 10 66 2 1 
+Row wise sum:77 65 69 
+Index of largest sum of row:0
