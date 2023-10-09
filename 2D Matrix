@@ -1,4 +1,4 @@
-//Program
+//Program of 2D matrix
 
 #include <iostream>
 using namespace std;
