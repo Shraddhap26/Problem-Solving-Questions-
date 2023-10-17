@@ -1,5 +1,4 @@
 //Program of 2D matrix
-
 #include <iostream>
 using namespace std;
 int main() {
@@ -31,7 +30,7 @@ int main() {
    for(int i=0;i<3;i++){
        int sum=0;
        for(int j=0;j<3;j++){
-       sum+=mat[j][i];
+       sum+=mat[j][i];   //just swap the i and j
    }
    cout<<sum<<" ";
    }
