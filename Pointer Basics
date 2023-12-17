@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+	int num=5;
+	int *ptr = &num;
+    cout<<num<<endl;
+	cout<<"num is:"<<*ptr<<endl;
+	cout<<"Address is "<<ptr<<endl;
+	
+	
+	//This is also valid i.e first initialize pointer with 0
+	int num2=3;
+	int *ptr2 = 0;
+	ptr2 = &num2;
+	
+		
+	//Copying a pointer
+	int *cp=ptr2;
+	cout<<*cp<<" -> "<< *ptr2 <<endl;  //Both values are same
+	cout<<cp<<" -> "<<ptr2<<endl;
+	
+    //Important concept
+    cout<<"Before :"<<*ptr<<endl;
+    (*ptr)++;
+    cout<<"After :"<<*ptr<<endl;
+    
+    
+     cout<<"Before :"<<ptr<<endl;
+    (ptr)++;  //here value of ptr pointer will increase by 4 Byte
+    cout<<"After :"<<ptr;
+  	
+return 0;
+}
