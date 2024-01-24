@@ -1,0 +1,43 @@
+Convert digit to word 
+ex : 
+1 : One
+Program :
+#include <iostream>
+using namespace std;
+void say_digit(int num, string arr[]){
+    if(num==0){
+        return;
+    }
+    int digit=num%10;
+    num=num/10;
+   
+    
+    say_digit(num,arr);
+     cout<<digit<<":"<<arr[digit]<<endl;
+    
+}
+int main() {
+    // Write C++ code here
+    int num;
+    cout << "Enter Number:";
+    cin>>num;
+    string arr[10]={"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+    say_digit(num,arr);
+    
+
+    return 0;
+}
+
+Output 1 :
+Enter Number:623
+6:Six
+2:Two
+3:Three
+-------------------------------
+Output 2 :
+Enter Number:12376
+1:One
+2:Two
+3:Three
+7:Seven
+6:Six
