@@ -1,0 +1,44 @@
+*****Method 1 :
+#include<iostream>
+using namespace std;
+int sumnums(int arr[],int size){
+    if(size==0){
+        return 0;
+    }
+     if(size==1){
+        return arr[0];
+    }
+    
+    int sum=arr[0]+sumnums(arr+1,size-1);
+    return sum;
+}
+int main(){
+    int arr[5]={10,2,4,3,5};
+    cout<<sumnums(arr,5);
+    return 0;
+}
+
+Output : 24
+
+
+*****Method 2 using pointer :
+#include<iostream>
+using namespace std;
+int sumnums(int *arr,int size){
+    if(size==0){
+        return 0;
+    }
+     if(size==1){
+        return arr[0];
+    }
+    
+    int sum=arr[0]+sumnums(arr+1,size-1);
+    return sum;
+}
+int main(){
+    int arr[5]={10,2,4,5,5};
+    cout<<sumnums(arr,5);
+    return 0;
+}
+
+Output : 26
