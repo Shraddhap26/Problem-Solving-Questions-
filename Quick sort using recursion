@@ -8,15 +8,15 @@ int partition(int arr[],int s,int e){
            count++;
        }
    }
-   int pivotindex=count+s;
+   int pivotindex=s+count;
    swap(arr[s],arr[pivotindex]);
    int i=s,j=e;
    while(i<pivotindex && j>pivotindex){
-       while(arr[i]<pivot)
+       while(arr[i]<=pivot)
        {
            i++;
        }
-        while(arr[j]>pivot)
+        while(arr[j]>=pivot)
        {
            j--;
        }
@@ -42,7 +42,7 @@ void quicksort(int arr[],int s ,int e){
 int main() {
    
    cout <<"Quick Sort:  ";
-   int arr[5]={45,23,59,27,20};
+   int arr[5]={45,23,59,89,45};
    int n=5;
    quicksort(arr,0,n-1);
     for(int i=0;i<n;i++){
@@ -51,6 +51,9 @@ int main() {
   
     return 0;
 }
+  
+    return 0;
+}
 
 Output :
-Quick Sort:  20 23 27 45 59 
+Quick Sort:  23 59 45 45 89
