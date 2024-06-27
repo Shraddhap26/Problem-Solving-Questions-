@@ -1,5 +1,6 @@
 Program:
 
+// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 int fact(int n)
@@ -20,7 +21,7 @@ int main() {
         val=fact(i);
         cout<<val<<endl;
         if(val%n==1){
-           cout<<i;
+           cout<<"Largest sub array length :"<<i;
            break;
         }
         
@@ -29,6 +30,14 @@ int main() {
 
     return 0;
 }
+
+
+Output:
+Enter Interger:5
+24
+6
+Largest sub array length :3
+
 
 
 Output: 
