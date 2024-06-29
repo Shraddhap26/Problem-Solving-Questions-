@@ -1,0 +1,30 @@
+Question:
+Reverse the numbers
+if n is 123 then reverse is 321.
+if n is 100 then reverse is 1.(Zero should be excluded because before zero has no meaning.)
+if n is 12030 then reverse is 3021.
+
+Code:
+
+#include <iostream>
+using namespace std;
+void armstrong(int n){
+
+int num=n,d,re_num=0;
+while(num)
+{
+    d=num%10;
+    re_num=re_num*10+d;
+    num=num/10;
+}
+cout<<"Reverse number of given word "<<n<<" is "<<re_num<<endl;
+}
+int main() {
+    // Write C++ code here
+   armstrong(10020);
+ 
+    return 0;
+}
+
+Output:
+Reverse number of given word 10020 is 2001
