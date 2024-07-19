@@ -1,0 +1,50 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int isprime(int n){
+    if(n==2){
+        return 1;
+    }
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+int persquare(int n){
+    for(int i=0;i<=n;i++){
+        if(i*i==n){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main() {
+  
+int p2=1;
+int p3=1;
+int arr[10];
+for(int i=0;i<10;i++){
+    if(persquare(i+1)){
+        
+        arr[i]=p3;
+        p3*=3;
+    }else if(isprime(i+1)){
+         
+        arr[i]=p2;
+        p2*=2;
+    }else{
+        
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+}
+for(int i=0;i<10;i++){
+    cout<<arr[i]<<endl;
+}
+    
+
+
+    return 0;
+}
