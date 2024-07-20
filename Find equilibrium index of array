@@ -1,0 +1,42 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int arr[7]={-7,1,5,2,-4,3,0};
+    int rightarr[7],leftarray[7];
+    int right,left;
+    right=0;
+    left=0;
+    int n=sizeof(arr)/sizeof(arr[0]);
+    
+    for(int i=0;i<n;i++){
+        leftarray[i]=left;
+        left+=arr[i];
+    }
+    
+    for(int i=n-1;i>=0;i--){
+        rightarr[i]=right;
+        right+=arr[i];
+    }
+    cout<<"right array"<<endl;
+    for(int i=0;i<n;i++){
+               cout<<rightarr[i]<<endl;
+        }
+    
+    cout<<"Left array"<<endl;
+    for(int i=0;i<n;i++){
+            cout<<leftarray[i]<<endl;
+        }
+        
+    for(int i=0;i<n;i++){
+        if(rightarr[i]==leftarray[i]){
+            cout<<"Equal index at "<<i+1;
+            break;
+        }
+    }
+    
+   
+   
+    return 0;
+}
