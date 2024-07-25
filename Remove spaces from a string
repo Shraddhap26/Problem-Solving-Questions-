@@ -1,0 +1,27 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+  string str;
+  char rev[100];
+  getline(cin,str);
+  int len=str.length();
+  int j= 0;   
+  int i;
+ 
+  for(i=0;i<len;i++){
+      if(str[i]==' '){
+          for(int j=i;j<len;j++){
+               str[j]=str[j+1];
+          }
+      }
+      str[j++]=str[i];
+
+  }
+  
+  cout<<str;
+
+    return 0;
+}
