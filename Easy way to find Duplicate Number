@@ -1,4 +1,4 @@
-//Write a program to find out duplicate number(v-10)
+//Write a program to find out duplicate number(v-10)   See third method 
 //my program (method 1)
 #include <iostream>
 #include <iostream>
@@ -73,3 +73,23 @@ int main(){
 
 //output :
 2
+
+
+Method 3 and easiest:
+int sockMerchant(int n, vector<int> ar) {
+    
+    unordered_map<int,bool>mp;
+       int count=0;
+        
+        
+        for(int i=0;i<n;i++){
+            if(mp[ar[i]]==true){
+                count+=1;
+                mp[ar[i]]=false;
+            }else{
+                mp[ar[i]]=true;
+            }
+        }
+        return count;
+
+}
