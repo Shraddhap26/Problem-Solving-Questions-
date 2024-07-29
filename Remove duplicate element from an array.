@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+
+int main() {
+    int arr[]={1,1,3,2,1,4,5,4};
+    int sizea=(sizeof(arr)/sizeof(arr[0]));
+    int arr2[10];
+    int count=0;
+    unordered_map<int,bool> mp;
+    
+    for(int i=0;i<sizea;i++){
+    if(!mp.count(arr[i])){
+        mp[arr[i]]=false;
+        arr2[count++]=arr[i];
+    }    
+    }
+        
+    
+    for(int i=0;i<count;i++){
+        cout<<arr2[i]<<" ";
+    }
+    
+
+    return 0;
+}
+
+Output: 
+1 3 2 4 5 
