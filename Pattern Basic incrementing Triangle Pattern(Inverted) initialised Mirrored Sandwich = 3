@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main() {
+  
+    
+     int numm;
+    int num=2;
+    for(int i=0;i<=3;i++){
+      num=num+i; 
+      numm=num+i;
+        for(int j=0;j<=i;j++){
+          
+          cout<<numm<<" ";
+          numm--;
+        }
+        cout<<endl;
+    }
+    
+    
+    int num2=11;
+    for(int i=3;i>=0;i--){
+       
+        for(int j=0;j<=i;j++){
+           
+          cout<<num2<<" ";
+          num2--;
+        }
+        cout<<endl;
+       
+    }
+    
+
+    return 0;
+}
+
+
+
+Output:
+           2
+           43
+           765
+           1110198
+           1110198
+           765
+           43
+           2
